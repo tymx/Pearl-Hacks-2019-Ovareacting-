@@ -2,18 +2,19 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <link rel="stylesheet" href="style.css">
-    <title>Ovaraction Game</title>
-    <script src="src/phaser.js"></script>
-    <script src="src/welcomeScreen.js"></script>
+    <title>Ovaryaction Game</title>
+    <script src="phaser.js"></script>
+    <script src="title.js"></script>
+    <script src="scene1.js"></script>
 </head>
 <body>
-   <script type="text/javascript">
-        window.onload = function (){
-            var game = new Phaser.Game(540, )
-        }
-    </script> 
+    <main id="game"></main>
+    <script type="text/javascript">
+    var game = new Phaser.Game(800,600,Phaser.AUTO);
+    game.state.add('title', Ovaryaction.Title);
+    game.state.add('scene1', Ovaryaction.Scene1);
+    game.state.start('title');
+    </script>
 </body>
 </html>
